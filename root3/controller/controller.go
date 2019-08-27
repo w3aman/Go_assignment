@@ -47,9 +47,8 @@ func Update(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	fmt.Println("Customer has been updated")
-	rs, _ := json.Marshal("new user created\n")
+
 	rs1, _ := json.Marshal(c)
-	w.Write(rs)
 	w.Write(rs1)
 
 }
@@ -64,9 +63,8 @@ func GetById(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	fmt.Println(c)
-	rs, _ := json.Marshal("new user created\n")
+
 	rs1, _ := json.Marshal(c)
-	w.Write(rs)
 	w.Write(rs1)
 }
 
@@ -80,9 +78,8 @@ func GetAll(w http.ResponseWriter, r *http.Request) {
 
 		fmt.Println(val)
 	}
-	rs, _ := json.Marshal("new user created\n")
+
 	rs1, _ := json.Marshal(c)
-	w.Write(rs)
 	w.Write(rs1)
 
 }
@@ -97,8 +94,8 @@ func Delete(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	fmt.Println(c)
-	rs, _ := json.Marshal("new user created\n")
+
 	rs1, _ := json.Marshal(c)
-	w.Write(rs)
+
 	w.Write(rs1)
 }
